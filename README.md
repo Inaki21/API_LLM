@@ -25,29 +25,28 @@ Este proyecto implementa un asistente de viajes inteligente utilizando:
 
 ---
 
-### Estructura del proyecto
+### Estructura del proyecto  
 
-_API_POYECTO_VO
-├── main.py              # Streamlit frontend
-├── groq_client.py       # Comunicación con la API de Groq
-├── db.py                # Conexión a PostgreSQL
-├── models.py            # Modelo ORM para la tabla
-├── create_table.sql     # Script SQL para crear la tabla
-├── requirements.txt     # Lista de dependencias
-├── .env                 # Claves de entorno (no subir a GitHub)
-└── README.md            # Documentación
+_API_POYECTO_VO  
+├── main.py              # Streamlit frontend  
+├── groq_client.py       # Comunicación con la API de Groq  
+├── db.py                # Conexión a PostgreSQL  
+├── models.py            # Modelo ORM para la tabla  
+├── create_table.sql     # Script SQL para crear la tabla  
+├── requirements.txt     # Lista de dependencias  
+    └── README.md            # Documentación
 
-Descargar el repositorio, ejecutar el main.py y tener ejecutado el servidor.
+Descargar el repositorio, ejecutar el main.py con el servidor ejecutado.
 
 ### SQL de la tabla
 
 
-CREATE TABLE IF NOT EXISTS conversations (
-    id SERIAL PRIMARY KEY,
-    question TEXT NOT NULL,
-    answer TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+CREATE TABLE IF NOT EXISTS conversations (  
+    id SERIAL PRIMARY KEY,  
+    question TEXT NOT NULL,  
+    answer TEXT NOT NULL,  
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  
+);  
 
 
 
