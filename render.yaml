@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: travel-assistant
+    env: docker
+    region: frankfurt
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false  # significa que Render esperará que tú pongas las variables manualmente en el panel web.
+      - key: DATABASE_URL
+        sync: false 
+    autoDeploy: true
+
+
